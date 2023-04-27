@@ -13,12 +13,16 @@ const btnSubmit = document.getElementById('add-button');
 const listItems = document.getElementById("shoppingList");
 
 onValue(listInDB, function(snapshot){
-    const fetchItems = snapshot.val();
-    listItems.innerHTML = "";
+    if (snapshot.exists()){
+        const fetchItems = snapshot.val();
+        listItems.innerHTML = "";
 
-    for (var item in fetchItems){
-        insertItem(item, fetchItems[item]);
-    }
+        for (var item in fetchItems){
+            insertItem(item, fetchItems[item]);
+        }
+    } else {
+        listItems.innerHTML = "<code>No items in the cart</code>"
+    };
 })
 btnSubmit.addEventListener('click', (e) => {
     let inputValue = txtInput.value;

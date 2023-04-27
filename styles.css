@@ -3,6 +3,7 @@
     margin:0;
     padding:0;
     background-color: whitesmoke;
+    user-select: none;
 }
 .container {
     display: flex;
@@ -10,7 +11,6 @@
     max-width: 320px;
     margin: 30px auto;
     padding: 30px;
-    border: 2px solid #9764A0;
     border-radius: 15px;
     background-color: whitesmoke;
 }
@@ -37,6 +37,9 @@ button {
     background-color: rgb(17,195,180);
     font-weight: bolder;
 }
+button:hover{
+    background-color: rgb(11, 103, 95);
+}
 #shoppingList {
     list-style: none;
     display: flex;
@@ -51,4 +54,8 @@ button {
     border-radius: 5px;
     color: palevioletred;
     box-shadow: 3px 3px #efefef;
+}
+#shoppingList li:hover {
+    background-color: palevioletred;
+    color:white;
 }
