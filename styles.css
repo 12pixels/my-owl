@@ -13,6 +13,10 @@
     padding: 30px;
     border-radius: 15px;
     background-color: whitesmoke;
+    text-align: center;
+}
+h1 {
+    color: #8D6C9F;
 }
 img {
     width: 150px;
@@ -21,21 +25,29 @@ img {
 }
 input, button {
     padding: 15px;
-    border:0;
+    border-color:transparent;
     border-radius: 8px;
     font-size: 18px;
     font-family: 'Rubik', sans-serif;
     text-align: center;
 }
 input {
-    color: #432000;
+    color: #8D6C9F;
     background-color: white;
     margin: 10px 0;
+}
+input:active {
+    border-color: #EFC88E;
 }
 button {
     color: white;
     background-color: rgb(17,195,180);
     font-weight: bolder;
+}
+button:disabled {
+    /* background-color: lightgray;
+    color: lightslategray; */
+    opacity: 0.4;
 }
 button:hover{
     background-color: rgb(11, 103, 95);
@@ -51,11 +63,11 @@ button:hover{
 #shoppingList li{
     padding: 10px;
     background-color: white;
+    color:#EFC88E;
     border-radius: 5px;
-    color: palevioletred;
     box-shadow: 3px 3px #efefef;
 }
 #shoppingList li:hover {
-    background-color: palevioletred;
-    color:white;
+    background-color: #EFC88E;
+    color: white;
 }

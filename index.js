@@ -24,11 +24,22 @@ onValue(listInDB, function(snapshot){
         listItems.innerHTML = "<code>No items in the cart</code>"
     };
 })
+txtInput.addEventListener('input', () => {
+    let text = txtInput.value;
+    let len = text.trim();
+    if (len == 0){
+        btnSubmit.setAttribute('disabled', true);
+    }
+    else{
+        btnSubmit.removeAttribute('disabled')      
+    }
+});
 btnSubmit.addEventListener('click', (e) => {
     let inputValue = txtInput.value;
     push(listInDB, inputValue);
 
     clearInput();
+    btnSubmit.setAttribute('disabled', true);
 });
 
 function clearInput(){
