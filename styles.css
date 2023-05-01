@@ -62,12 +62,12 @@ button:hover{
 }
 #shoppingList li{
     padding: 10px;
-    background-color: white;
-    color:#EFC88E;
+    background-color: #8D6C9F;
+    color: white;
     border-radius: 5px;
     box-shadow: 3px 3px #efefef;
 }
 #shoppingList li:hover {
-    background-color: #EFC88E;
-    color: white;
+    background-color: white;
+    color:#8D6C9F;
 }
