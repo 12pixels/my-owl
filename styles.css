@@ -52,7 +52,7 @@ button:disabled {
 button:hover{
     background-color: rgb(11, 103, 95);
 }
-#shoppingList {
+#myList, #myRemovedList {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -60,14 +60,17 @@ button:hover{
     gap: 10px;
     padding: 20px 0px;
 }
-#shoppingList li{
+#myList li, #myRemovedList li{
     padding: 10px;
     background-color: #8D6C9F;
     color: white;
     border-radius: 5px;
     box-shadow: 3px 3px #efefef;
 }
-#shoppingList li:hover {
+#myRemovedList li.deleted {
+    background-color: darkgray;color: #efefef;
+}
+#myList li:hover {
     background-color: white;
     color:#8D6C9F;
 }

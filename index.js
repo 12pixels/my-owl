@@ -10,7 +10,8 @@ const listInDB = ref(database, "listItems");
 
 const txtInput = document.getElementById('input-field');
 const btnSubmit = document.getElementById('add-button');
-const listItems = document.getElementById("shoppingList");
+const listItems = document.getElementById("myList");
+const removedItems = document.getElementById("myRemovedList");
 
 onValue(listInDB, function(snapshot){
     if (snapshot.exists()){
@@ -52,6 +53,8 @@ function insertItem(ID, txtValue){
 
     liItem.onclick = function(){
         let itemLocation = ref(database,`listItems/${ID}`);
+        liItem.classList.add("deleted");
+        removedItems.appendChild(liItem);
         remove(itemLocation);
     }
 }
