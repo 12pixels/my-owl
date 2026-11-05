@@ -68,7 +68,8 @@ button:hover{
     box-shadow: 3px 3px #efefef;
 }
 #myRemovedList li.deleted {
-    background-color: darkgray;color: #efefef;
+    color: darkgray; background-color: #efefef;
+    text-decoration: line-through;
 }
 #myList li:hover {
     background-color: white;
